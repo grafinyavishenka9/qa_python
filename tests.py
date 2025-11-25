@@ -41,10 +41,17 @@ class TestBooksCollector:
 
         assert len(collector.get_books_genre()) == 1
     
-    @pytest.mark.parametrize('name', ['','Очень длинное название книги, в котором больше чем 41 символ'])
+    @pytest.mark.parametrize('name', ['Я','Средняя длина названия','В названии 40 символовВ названии 40 симв'])
+    def test_add_new_book_name_normal_length(self, name):
+        collector = BooksCollector()
+        collector.add_new_book(name)
+        assert (len(collector.get_books_genre().keys()) > 0) and (len(collector.get_books_genre().keys()) < 41)
+
+    @pytest.mark.parametrize('name', ['','В названии 41 символВ названии 41 символ!','В названии 42 символаВ названии 42 символа','Очень длинное название книги, в котором больше чем 41 символ'])
     def test_add_new_book_name_short_or_long_length(self, name):
         collector = BooksCollector()
-        book_not_added = collector.add_new_book(name)
+        
+        collector.add_new_book(name)
         assert collector.get_books_genre() == {}
 
     def test_add_new_book_name_book_genre_is_empty_by_default(self):
