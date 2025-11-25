@@ -14,7 +14,7 @@
 
 7)test\_add\_new\_book\_name\_short\_or\_long\_length - тестируем добавление книги, не соответствующее условиям(длина названия 0 символов) (модуль add\_new\_book)
 
-8\)test\_add\_new\_book\_name\_short\_or\_long\_length - тестируем добавление книги, не соответствующее условиям(длина названия больше или равна 41 символу) (модуль add\_new\_book)
+8)test\_add\_new\_book\_name\_short\_or\_long\_length - тестируем добавление книги, не соответствующее условиям(длина названия больше или равна 41 символу) (модуль add\_new\_book)
 
 9)test\_add\_new\_book\_name\_book\_genre\_is\_empty\_by\_default - тестируем, что при добавлении книги, жанр по умолчанию пустая строка (модуль add\_new\_book)
 
@@ -32,9 +32,9 @@
 
 17)test\_add\_book\_in\_favorites\_book\_added - тестируем, что книги добавляюся в избранное (модуль add\_book\_in\_favorites)
 
-18)test\_delete\_book\_from\_favorites\_book\_removed - тестируем,что книга удаляется из избранного (модуль delete\_book\_from\_favorites)
+18)test\_add\_book\_in\_favorites\_cant\_add\_book\_if\_book\_not\_in\_books\_genre - тестируем,что в избранное нельзя добавить книгу,которая не была добавлена ранее в коллекцию книг (модуль add\_book\_in\_favorites)
 
-19)test\_get\_list\_of\_favorites\_books\_get\_list\_of\_favorities\_books - тестируем, что можно получить список избранных книг (модуль get\_list\_of\_favorites\_books)
+19)test\_delete\_book\_from\_favorites\_book\_removed - тестируем,что книга удаляется из избранного (модуль delete\_book\_from\_favorites)
 
-
+20)test\_get\_list\_of\_favorites\_books\_get\_list\_of\_favorities\_books - тестируем, что можно получить список избранных книг (модуль get\_list\_of\_favorites\_books)
 

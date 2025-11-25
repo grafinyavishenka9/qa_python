@@ -117,6 +117,14 @@ class TestBooksCollector:
 
         assert collector.favorites == ['Что делать, если ваш кот хочет вас убить'] 
 
+    def test_add_book_in_favorites_cant_add_book_if_book_not_in_books_genre(self):
+        collector = BooksCollector()
+
+        collector.add_new_book('Гордость и предубеждение и зомби')
+        collector.add_book_in_favorites('Что делать, если ваш кот хочет вас убить')
+
+        assert collector.favorites == [] 
+
     def test_delete_book_from_favorites_book_removed(self):
         collector = BooksCollector()
 
